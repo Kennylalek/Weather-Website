@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-container">
+            <div>
+                <h2>Weather<span>App</span></h2>
+            </div>
+            <div></div>
+            <form action="/" method="POST" autocomplete="off">
+                <input id="city-input" name="search_input" type="text" placeholder="Search Location" list="cities-list">
+                <datalist id="cities-list"></datalist>
+                <button class="search-btn" type="submit">
+                    <img class="search" src="/static/images/search Button.svg">
+                </button>
+            </form>
+            <div class="popular-cities">
+                {% for source in sources : %}
+                <div class="city-container">
+                    <div class="weather-disc">
+                        <h4>{{source['temperature']}}°C</h4>
+                        <p class="adj">{{source['description']}}</p>
+                    </div>
+                    <div class="per-city">
+                        <img src="{{source['icon']}}">
+                    </div>
+                    <div class="city-name">
+                        <h5>{{ source['city_name'] }}</h5>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="right-container">
+            <div>
+                <h3>Weather <span>Forecast</span></h3>
+            </div>
+            <div class="weather-forecast">
+                <div>
+                    <h4>Today</h4>
+                </div>
+                <div>
+                    <p id="date">{{ html_data['current_time'] }}</p>
+                </div>
+                <div class="temp">
+                    <h3>{{ html_data['temperature'] }}°C</h3>
+                    <p class="adj">{{ html_data['description'] }}</p>
+                </div>
+                <div class="img-div">
+                    <img class="special" src="{{html_data['icon']}}">
+                </div>
+                <div class="Location-div">
+                    <img class="Location" src="/static/images/location-sign-svgrepo-com.svg">
+                    <p class="country-p">{{ html_data['city_name'] }}, {{ html_data['country'] }}</p>
+                </div>
+            </div>
+            <div>
+                <h3>Today Overview</h3>
+            </div>
+            <div class="weather-today">
+                <div class="data-container">
+                    <div class="icon">
+                        <img class="iconsvg" src="/static/images/dust.svg">
+                    </div>
+                    <div class="data">
+                        <p class="disc">Wind Speed</p>
+                        <h4 class="value">{{html_data['wind']}} km/h</h4>
+                    </div>
+                </div>
+                <div class="data-container">
+                    <div class="icon">
+                        <img class="iconsvg" src="/static/images/fog.svg">
+                    </div>
+                    <div class="data">
+                        <p class="disc">Pressure</p>
+                        <h4 class="value">{{html_data['pressure']}}/mb</h4>
+                    </div>
+                </div>
+                <div class="data-container">
+                    <div class="icon">
+                        <img src="/static/images/thermometer-svgrepo-com.svg">
+                    </div>
+                    <div class="data">
+                        <p class="disc">Feels like</p>
+                        <h4 class="value">{{html_data['feels_like']}}°C</h4>
+                    </div>
+                </div>
+                <div class="data-container">
+                    <div class="icon">
+                        <img class="hum iconsvg" src="/static/images/humidity-svgrepo-com.svg">
+                    </div>
+                    <div class="data">
+                        <p class="disc">Humidity</p>
+                        <h4 class="value">{{html_data['humidity']}}%</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

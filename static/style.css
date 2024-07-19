@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+html {
+    font-size: 80%;
+}
+
+body {
+    background: linear-gradient(to right, rgba(78, 135, 116, 0.865), rgba(117, 154, 105, 0.781));
+    line-height: 1.7;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1, h2, h3, h4, h5 {
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4  {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+.container {
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+}
+
+.left-container {
+    background-color: #0f172a;
+    color: white;
+    padding: 3.6rem 7.2rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1.2rem;
+}
+
+.right-container {
+    padding: 3.6rem 6.4rem;
+    color: white;
+    background-color: #1b2b54;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-width: 600px;
+}
+
+img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.popular-cities {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1.2rem;
+}
+
+.city-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #28324e;
+    border-radius: 1rem;
+    padding: 1.6rem;
+    gap: 3.2rem;
+}
+
+form  {
+    width: 100%;
+    height: auto;
+    min-height: 47px;
+    display: flex;
+    position: relative;
+}
+
+#city-input {
+    padding-left: 4.6rem;
+    color: white;
+    background-color: #28324e;
+    border: none;
+    border-radius: 0.8rem;
+    height: 3rem;
+    width: 100%;
+}
+
+#city-input::placeholder {
+    color: white;
+}
+
+option {
+    color: white;
+    background-color: #28324e;
+    font-family: 'Montserrat';
+}
+
+.search-btn {
+    position: absolute;
+    background-color: #28324e;
+    border: none;
+    border-radius: 1rem;
+    left: 1%;
+    top: 15%;
+}
+
+.search-btn:hover {
+    cursor: pointer;
+}
+
+.search {
+    height: 2rem;
+}
+
+.city-name {
+    grid-column: span 2;
+}
+
+.adj {
+    font-size: 0.8rem;
+}
+
+.weather-disc {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+span {
+    color: #00c853;
+}
+
+.iconsvg {
+    width: 4rem;
+    height: 4rem;
+}
+
+.weather-forecast {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6rem;
+    background-color: #28324e;
+    border-radius: 1rem;
+    padding: 2rem 3rem;
+    width: 420px;
+}
+
+.weather-today {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6rem;
+}
+
+.data-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #28324e;
+    padding: 1.6rem;
+    gap: 1.4rem;
+    border-radius: 1rem;
+}
+
+.img-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 150px;
+}
+
+.temp {
+    width: 150px;
+}
+
+#date {
+    text-align: center;
+}
+
+.special {
+    position: absolute;
+    top: -7%;
+    left: 30%;
+}
+
+.special {
+    height: 9rem;
+    width: 9rem;
+}
+
+.temp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.disc {
+    font-size: 0.8rem;
+}
+
+.Location-div {
+    position: relative;
+    padding-left: 2rem;
+    max-width: 300px;
+}
+
+.Location {
+    height: 1.4rem;
+    width: 1.4rem;
+    position: absolute;
+    left: 0;
+}
+
+.value, .data {
+    text-align: center;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Location-div {
+    grid-column: span 2;
+}
+
+#date {
+    text-align: right;
+}
+
+.per-city {
+    position: relative;
+}
+
+.per-city img {
+    position: absolute;
+}
+
+.hum {
+    height: 3rem;
+    width: 3rem;
+}
+
+.cities-list {
+    display: none;
+}
+
+.country-p {
+    max-width: 280px;
+}
+
+/* #28324e
