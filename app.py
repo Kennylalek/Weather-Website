@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect
 from weather import get_coordinates, get_weather
 
 
@@ -28,8 +28,13 @@ def index() :
     else :
         city = 'Algiers'
 
-    lant, long = get_coordinates(city, state, country)
-    data = get_weather(lant, long)
+    city = city.replace(' ', '-')
+    try :
+        lant, long = get_coordinates(city, state, country)
+        data = get_weather(lant, long)
+    except :
+        return redirect('/')
+    
     return render_template('index.html', html_data = data, sources = sources)
         
 
