@@ -1,0 +1,23 @@
+{
+    "clear sky" : "clear-night",
+    "few clouds" : "cloudy-1-night",
+    "scattered clouds" : "cloudy-2-night",
+    "broken clouds" : "cloudy-3-night",
+    "overcast clouds" : "cloudy-3-night",
+    "drizzle" : "rainy-3-night",
+    "rain" : "rainy-2-night",
+    "shower rain" : "rainy-3-night",
+    "thunderstorm" : "scattered-thunderstorms-night",
+    "snow" : "snowy-3-night",
+    "mist" : "haze",
+    "smoke" : "haze",
+    "haze" : "haze", 
+    "dust" : "wind",
+    "dust whirls" : "wind",
+    "sand/dust whirls" : "wind",
+    "fog" : "fog-day",
+    "sand" : "haze",
+    "tornado" : "tornado",
+    "squalls" : "haze",
+    "volcanic ash" : "haze"
+}
