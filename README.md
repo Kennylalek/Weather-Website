@@ -61,10 +61,13 @@ This is a simple Flask application that provides weather forecasts using the Ope
 ├── static
 │   ├── css
 │   │   └── style.css       # CSS styles
+│   ├── js
+│   │   └── script.js       # JavaScript file
 │   └── images              # Directory for weather icons from GitHub
 ├── data                    # Contains files to link each weather condition with an icon
 │   ├── icons_day.json      
-|   └── icons_night.json    
+|   ├── icons_night.json 
+|   └── cities.json         # List of all cities    
 ├── .env                    # Environment variables
 ├── requirements.txt        # Python dependencies
 └── README.md               # This file
