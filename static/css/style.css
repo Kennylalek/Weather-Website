@@ -291,4 +291,31 @@ span {
     max-width: 280px;
 }
 
+#suggestions {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    right: 0;
+    background-color: #28324e;
+    border: none;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+    max-height: 250px;
+    overflow-y: auto;
+    list-style-type: none;
+    z-index: 1000;
+    display: none;
+}
+
+#suggestions li {
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#suggestions li:hover {
+    background-color: #4a5b80;
+}
+
+
 /* #28324e

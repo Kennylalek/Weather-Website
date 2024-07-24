@@ -14,8 +14,8 @@
             </div>
             <div></div>
             <form action="/" method="POST" autocomplete="off">
-                <input id="city-input" name="search_input" type="text" placeholder="Search Location" list="cities-list">
-                <datalist id="cities-list"></datalist>
+                <input id="city-input" name="search_input" type="text" placeholder="Search Location">
+                <ul id="suggestions"></ul>
                 <button class="search-btn" type="submit">
                     <img class="search" src="/static/images/search Button.svg">
                 </button>
@@ -103,5 +103,7 @@
             </div>
         </div>
     </div>
+
+    <script src="/static/js/script.js"></script>
 </body>
 </html>
