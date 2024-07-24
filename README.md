@@ -79,7 +79,7 @@ Make sure to install all dependencies listed in the `requirements.txt` file.
 ## Credits
 
 - Weather data provided by [OpenWeatherMap](https://openweathermap.org/)
-- Weather icons from [GitHub repository](https://github.com/Makin-Things/weather-icons.git)
+- Weather icons from [Makin-Things](https://github.com/Makin-Things/weather-icons.git)
 
 ## License
 
