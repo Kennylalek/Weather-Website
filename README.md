@@ -29,6 +29,7 @@ This is a simple Flask application that provides weather forecasts using the Ope
     ```
 
 4. **Set up environment variables:**
+    - This application uses Weather API to fetch weather data. Sign up for an API key.
     - Create a `.env` file in the root directory of your project.
     - Add your OpenWeatherMap API key to the `.env` file:
         ```
@@ -50,7 +51,7 @@ This is a simple Flask application that provides weather forecasts using the Ope
 3. **Enter a city name in the search bar to get the weather information.**
 
 ## Project Structure
-
+```plaintext
 .
 ├── app.py                  # Main application file
 ├── weather.py              # Contains utility functions
@@ -80,7 +81,3 @@ Make sure to install all dependencies listed in the `requirements.txt` file.
 
 - Weather data provided by [OpenWeatherMap](https://openweathermap.org/)
 - Weather icons from [Makin-Things](https://github.com/Makin-Things/weather-icons.git)
-
-## License
-
-This project is licensed under the MIT License.
