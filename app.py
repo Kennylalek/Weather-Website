@@ -1,5 +1,7 @@
-from flask import Flask, request, render_template, redirect
+from flask import Flask, request, render_template, redirect, jsonify
 from weather import get_coordinates, get_weather
+import os
+import json
 
 
 app = Flask(__name__)
@@ -29,6 +31,9 @@ def index() :
         city = 'Algiers'
 
     city = city.replace(' ', '-')
+    country = country.replace(' ', '')
+    state = state.replace(' ', '')
+    
     try :
         lant, long = get_coordinates(city, state, country)
         data = get_weather(lant, long)
@@ -36,6 +41,14 @@ def index() :
         return redirect('/')
     
     return render_template('index.html', html_data = data, sources = sources)
+
+@app.route('/get_cities')
+def get_cities() :
+    json_path = os.path.join(app.root_path, 'data', 'cities.json')
+
+    with open(json_path) as json_file:
+        data = json.load(json_file)
+    return jsonify(data)
         
 
 if __name__ == "__main__" :
