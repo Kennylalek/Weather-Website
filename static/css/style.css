@@ -125,12 +125,6 @@ form  {
     color: white;
 }
 
-option {
-    color: white;
-    background-color: #28324e;
-    font-family: 'Montserrat';
-}
-
 .search-btn {
     position: absolute;
     background-color: #28324e;
@@ -240,6 +234,7 @@ span {
     position: relative;
     padding-left: 2rem;
     max-width: 300px;
+    grid-column: span 2;
 }
 
 .Location {
@@ -257,10 +252,6 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.Location-div {
-    grid-column: span 2;
 }
 
 #date {
@@ -309,6 +300,3 @@ span {
 #suggestions li:hover {
     background-color: #4a5b80;
 }
-
-
-/* #28324e
