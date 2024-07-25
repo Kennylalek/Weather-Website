@@ -216,12 +216,9 @@ span {
     position: absolute;
     top: -7%;
     left: 30%;
-}
-
-.special {
     height: 9rem;
     width: 9rem;
-}
+}    
 
 .temp {
     display: flex;
@@ -281,10 +278,6 @@ span {
 .hum {
     height: 3rem;
     width: 3rem;
-}
-
-.cities-list {
-    display: none;
 }
 
 .country-p {
